@@ -17,3 +17,6 @@ http://www.albanx.com/cubeslider/doc.php
 
 ##Demo:
 http://www.albanx.com/cubeslider/
+
+##License
+MIT

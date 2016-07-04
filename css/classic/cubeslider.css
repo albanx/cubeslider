@@ -1,0 +1,173 @@
+/***********Common themes**********/
+.cs-container
+{
+	margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+.cs-slider
+{
+	margin: 0 auto;
+	padding: 0;
+    position: relative;
+	width:100%;
+	z-index:10;
+}
+
+.cs-container a
+{
+	background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICR‌​AEAOw==');	
+}
+
+.cs-container img
+{
+	max-width: 100%;
+	display: block;
+	margin-top:0;
+}
+/*********************************/
+
+
+/***Navigation arrows****/
+.cs-container .cs-nav-next, .cs-container .cs-nav-prev{
+	width:45px;
+	height:45px;
+	position:absolute;	
+	border-radius:6px;
+	background-image:url(images.png);
+	background-color:rgba(0,0,0,0.3);
+	cursor:pointer;
+	top:50%;
+}
+
+.cs-container .cs-nav-next:hover, .cs-container .cs-nav-prev:hover{
+	background-color:rgba(0,0,0,0.7);
+}
+.cs-container .cs-nav-next{
+	right:0;
+	background-position: -65px 2px;
+}
+.cs-container .cs-nav-prev{
+	left:0;
+	background-position: -25px 2px;
+}
+/************************/
+
+/*****nav bullets*********************/
+.cs-container .cs-nav-cont
+{
+	position:absolute;
+	left:45px;
+	bottom:-25px;
+	z-index:20;
+}
+.cs-container .cs-nav-cont span{
+	background-image:url(images.png);
+	width:24px;
+	height:24px;
+	float:left;
+	background-repeat:no-repeat;
+	background-position:0px 0px;
+	cursor:pointer;
+}
+
+.cs-container .cs-nav-cont span:hover, .cs-nav-cont span.cs-current
+{
+	background-position:0px -24px;
+	opacity:1.0;
+}
+/*************************************/
+
+/******Play button*****/
+.cs-container .cs-nav-play
+{
+    background-image: url("images.png");
+	background-position: -150px -6px;
+    height: 20px;
+	width: 20px;
+    position: absolute;
+    right: 45px;
+	bottom: -25px;
+	cursor:pointer;
+}
+.cs-container .cs-nav-play.cs-nav-stop{
+	background-position: -117px -6px;
+}
+/**************************/
+
+/*****Title style*****/
+.cs-container .cs-title{
+    background-color: black;
+    bottom: 0;
+    color: white;
+    display: none;
+    float: left;
+    font-family: 'Volkhov',Georgia,sans-serif;
+    font-size: 130%;
+    font-style: italic;
+    font-weight: 400;
+    left: 0;
+    line-height: 38px;
+    margin-bottom: 0;
+    opacity: 0.8;
+    padding: 0 10px;
+    position: absolute;
+    right: 0;
+}
+/***********************************/
+
+.cs-container .cube-face 
+{
+	margin: 0;
+	display: block;
+	position: absolute;
+	-moz-backface-visibility : hidden;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.cs-container .cs-shadow
+{
+  position:absolute;
+  bottom:-70px;
+  left:50%;
+  margin-left:-368px;
+  background:transparent url(shadow.png) no-repeat top left;
+  height:168px;
+  width:736px;
+  z-index:1;
+}
+
+
+
+
+/* Fallback Style */
+.cs-slider-fb-wrapper
+{
+	overflow:hidden;
+}
+.cs-slider-fb img{
+	display:none;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+.cs-loader
+{
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0;
+	top:0;
+	background-image:url(loader.gif);
+	background-position:center; 
+	background-repeat:no-repeat;
+	background-color:white;
+	z-index:1001;
+}

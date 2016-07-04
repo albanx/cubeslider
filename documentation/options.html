@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+	<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+	<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+	<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+	<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+	
+	<head>
+		<!-- site charset -->
+		<meta charset="utf-8">
+		<title>Cube Slider by AlbanX</title>
+		<meta name="keywords" content="cube slider, css3 slider, image slider, slideshow">
+		<meta name="description" content="Html5 image slider">
+		<meta name="author" content="Alban Xhaferllari">
+		
+		<!--  Stylesheets -->
+		<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+		<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Twitter Bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap-responsive.min.css"> <!-- Twitter Bootstrap (responsive) -->
+		<link rel="stylesheet" href="style.css"> <!-- main stylesheet -->
+		<link rel="stylesheet" href="css/style-responsive.css"> <!-- main stylesheet (responsive) -->
+		<!-- PACK-theme -->
+		<!-- PACK-font -->
+		<!--  Meta  -->
+		
+		<!-- favicons for the site  -->
+
+		<!--  Device viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<!--  HTML5 for older browsers -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!--  IE8 fixes -->
+		<!--[if IE 8]>
+			<link rel="stylesheet" href="css/ie8.css">
+		<![endif]-->
+		<link rel="stylesheet" href="css/theme-options.css">
+		
+		<script src="js/jquery.min.js"></script> <!--  jQuery  -->
+		<script src="js/bootstrap.min.js"></script> <!--  bootstrap  -->
+		
+		<script>
+		if (top.location != location) {
+		    top.location.href = document.location.href ;
+		}
+		</script>
+
+		<script type="text/javascript" src="js/prettify.js"></script>
+		<link rel="stylesheet" href="css/prettify.css">
+	</head>
+	
+<body>
+<!-- GO TO TOP BUTTON -->
+<div id="totop" class="hidden-phone hidden-tablet"><a class="btn btn-inverse">^</a></div>
+<div class="container" id="main-container">
+<header>
+	<h1 id="logotype"><a href="index.php"><img style="width:142px;" src="images/logo.jpg" alt="Cube slider logo"></a></h1>
+	<div id="social">
+		<ul>
+			<li><a href="https://www.facebook.com/xscripts"><img src="images/icons/facebook.png" alt="Facebook"></a></li>
+			<li><a href="#"><img src="images/icons/twitter.png" alt="Twitter"></a></li>
+			<li><a href="https://plus.google.com/share?url=http://www.albanx.com/ajaxuploader/" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="images/icons/gplus.png" alt="Google+"></a></li>
+			<li><a target="_blank" href="//pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.albanx.com%2Fajaxuploader%2F&media=http%3A%2F%2Fwww.albanx.com%2Fajaxuploader%2Fimages%2Flogo.png&description=Real%20Ajax%20Uploader%20HTLM5" data-pin-do="buttonPin" data-pin-config="none"><img src="images/icons/ptrest.png" alt="Pinterest"></a></li>
+		</ul>
+	</div>
+</header>
+<section id="navigation">
+	<div class="span12">
+		<div class="row">
+			<nav>
+					<ul id="main-navigation" class="hidden-phone hidden-tablet">
+						<li><a href="index.html">How to setup</a></li>
+						<li><a href="options.html">Options and Methods</a></li>
+					</ul>
+			</nav>
+		</div>
+	</div>
+</section>	
+		
+		
+				
+		<div id="content" class="entry portfolio-layout portfolio-3col gallery">
+
+<div class="row-fluid">
+
+<div class="span10">
+				<div id="page-title">
+					<h2>Options, Methods, APIs</h2>
+					<p class="subtitle">All configurable options</p>
+					<div class="clear"></div>
+				</div>
+
+
+<h2 id="options">Options:</h2>
+<p>Configurable options</p>
+
+<table class="table table-striped table-bordered doc-table">
+<thead>
+	<tr>
+		<th>Option</th>
+		<th>Type</th>
+		<th>Default</th>
+		<th>Description</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>orientation</td>
+		<td>String</td>
+		<td>v</td>
+		<td>Set the orientation of animation. v/h (v)ertical rotation will be in the x axis, (h) animation will be in the y axis</td>
+	</tr>
+	
+	<tr>
+		<td>perspective</td>
+		<td>Int</td>
+		<td>1200</td>
+		<td>Set the 3d css3 perspective. Lower values gives a large perspective. 1200 is the reccomended value.</td>
+	</tr>
+	
+	<tr>
+		<td>cubesNum</td>
+		<td>Int/Object</td>
+		<td>{rows:1, cols:1}</td>
+		<td>Set the rows and cols of cubes to slice the image. Example {rows:1 , cols:1} shows a single big cube, {rows:2, cols:2} shows 4 cubes. TRY!</td>
+	</tr>
+	
+	<tr>
+		<td>random</td>
+		<td>Bool</td>
+		<td>false</td>
+		<td>If set to random orientation and cubes will be randomized. cubeNum values will be used as
+		maximum values.</td>
+	</tr>
+	
+	<tr>
+		<td>spreadPixel</td>
+		<td>Int</td>
+		<td>0</td>
+		<td>Set the number of pixel by with the cubes expand during animation. Gives an elastic animation.</td>
+	</tr>
+	
+	<tr>
+		<td>backfacesColor</td>
+		<td>HTML color</td>
+		<td>'#222'</td>
+		<td>Set the color (in html color notation) of the backfaces of cubes. Can be transparent.</td>
+	</tr>
+	
+	<tr>
+		<td>cubeSync</td>
+		<td>Int</td>
+		<td>0</td>
+		<td>Set the time in milliseconds of the cubes sincronization during animation. 0 means that cubes will animate at the same time.</td>
+	</tr>
+
+	<tr>
+		<td>animationSpeed</td>
+		<td>Int</td>
+		<td>800</td>
+		<td>The time in milliseconds of the animatino of single cubes.</td>
+	</tr>
+
+	
+	<tr>
+		<td>easing</td>
+		<td>String</td>
+		<td>'ease'</td>
+		<td>Set the animation to be used for the css3 3d mode slide. For a complete list of easings or
+		timing functions please refer to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/timing-function">Mozilla</a>.</td>
+	</tr>
+	
+	
+	<tr>
+		<td>fallbackEasing</td>
+		<td>String</td>
+		<td>'easeOutExpo'</td>
+		<td>Set the animation to be used for the fallback standard slide. Use standard jquery easings. See below for more easings.</td>
+	</tr>
+	
+	<tr>
+		<td>autoplay</td>
+		<td>Bool</td>
+		<td>false</td>
+		<td>Set the autoplay mode. True images with slide automatically every autoplayInterval time.</td>
+	</tr>
+		
+	<tr>
+		<td>autoplayInterval</td>
+		<td>Int</td>
+		<td>2000</td>
+		<td>autoplayInterval time in milliseconds of autoplay.</td>
+	</tr>
+	
+	<tr>
+		<td>mode3d</td>
+		<td>Bool/String</td>
+		<td>auto</td>
+		<td>If auto the plugin will choose the best supported mode for the browser.If set to false it will force fallback standard sliding.</td>
+	</tr>
+	
+	<tr>
+		<td>arrows</td>
+		<td>Bool</td>
+		<td>true</td>
+		<td>Tell to show or hide left and right arrows navigation.</td>
+	</tr>
+	
+		<tr>
+		<td>navigation</td>
+		<td>Bool</td>
+		<td>true</td>
+		<td>Tell if to show or hide navigation bullets.</td>
+	</tr>
+	
+		<tr>
+		<td>play</td>
+		<td>Bool</td>
+		<td>true</td>
+		<td>Show or hide the play/pause button.</td>
+	</tr>
+	
+	<tr>
+		<td>titleSpeed</td>
+		<td>Int</td>
+		<td>300</td>
+		<td>The show speed of title in milliseconds.</td>
+	</tr>
+	
+	<tr>
+		<td>titleEasing</td>
+		<td>String</td>
+		<td>easeOutExpo</td>
+		<td>The animation easing of the title.</td>
+	</tr>
+</tbody>
+</table>
+
+<h2 id="transition">jQuery Easings for fallback transitions</h2>
+<p>Possible transition are the following that uses cube-beizer equations:<p>
+<ul>
+	<li>easeInQuad</li>
+	<li>easeInCubic</li>
+	<li>easeInQuart</li>
+	<li>easeInQuint</li>
+	<li>easeInSine</li>
+	<li>easeInExpo</li>
+	<li>easeInCirc</li>
+	<li>easeInBack</li>
+
+	<li>easeOutQuad</li>
+	<li>easeOutCubic</li>
+	<li>easeOutQuart</li>
+	<li>easeOutQuint</li>
+	<li>easeOutSine</li>
+	<li>easeOutExpo</li>
+	<li>easeOutCirc</li>
+	<li>easeOutBack</li>
+
+	<li>easeInOutQuad</li>
+	<li>easeInOutCubic</li>
+	<li>easeInOutQuart</li>
+	<li>easeInOutQuint</li>
+	<li>easeInOutSine</li>
+	<li>easeInOutExpo</li>
+	<li>easeInOutCirc</li>
+	<li>easeInOutBack</li>
+</ul>
+<p>For more information on the easing type see the <a href="http://gsgd.co.uk/sandbox/jquery/easing/">jQuery easing plugin</a> (that is integrated inside the  slider plugin)</p>
+
+
+<h2 id="methods">Methods, API:</h2>
+<p> This is the first version of the plugin, I have not added any method or callback. This options will be added on the next verions depending on users
+request or sell quantity.</p>
+<table class="options">
+	<thead>
+		<tr>
+			<th>Method</th>
+			<th>Description</th>
+			<th>Example</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>destroy</td>
+			<td>Destroys the plugin.</td>
+			<td>NO APIS FOR THE MOMENT</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 id="installation2">Setup with links:</h2>
+<p>The Cube slider can be set up to work with images wrapped into links, so on image click a link is opened for another page</p>
+<p> For settings up the links just follow the Basic Setup instruction and change only the step 3 as follow:
+
+<ul>
+	<li>Create a DIV tag where to set the image list. Also optionally for each image you can set a title
+	that will be shown during slider:
+	<pre class="prettyprint linenums">
+&lt;div id="demo"&gt;           
+    &lt;a href="http://www.google.com/" target="_blank"&gt;
+		&lt;img src="image/image1.jpg" title="sometitle to show on slide" /&gt; 
+    &lt;/a&gt;
+    
+	&lt;a href="http://www.facebook.com/" target="_blank"&gt;
+		&lt;img src="image/image2.jpg" title="sometitle to show on slide" /&gt; 
+	&lt;/a&gt;
+	
+	&lt;a href="http://www.yahoo.com/" target="_blank"&gt; 
+		&lt;img src="image/image3.jpg" title="sometitle to show on slide" /&gt; 
+	&lt;/a&gt;
+	
+	&lt;a href="http://www.albanx.com/" target="_blank"&gt; 
+		&lt;img src="image/image4.jpg" title="sometitle to show on slide" /&gt; 
+	&lt;/a&gt;
+&lt;/div&gt;
+	</pre>
+	</li>
+</ul>
+
+<h2 id="examples">Examples</h2>
+<p>For live examples open the examples folder inside the downloaded package.</p>
+
+<h2 id="contacts">Contacts</h2>
+<p>For questions, bugs and suggestions contact me at albanx[at]gmail[dot]com, or visit my web site <a href="http://www.albanx.com">www.albanx.com</a></p>
+
+</div>
+</div>
+
+
+<script>
+var list = $('#left_menu_doc li');
+list.click(function(){
+	list.removeClass('active');
+	$(this).addClass('active');
+});
+</script>
+		</div>
+
+		
+		<div class="row" id="footer">
+			<div class="span12">
+				<div id="copyright"><p>&copy; 2013, <a href="http://www.albanx.com">www.albanx.com</a>, Alban Xhaferllari</p></div>
+			</div>
+		</div>
+		
+			
+	<!--  javascripts  -->
+	<script src="js/common.js"></script><!--   custom scripts  -->
+	</div>
+	<div class="spacer"></div>
+
+	<script type="text/javascript">
+	 window.prettyPrint && prettyPrint();
+	</script>
+</body>
+</html>
